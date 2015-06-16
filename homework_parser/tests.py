@@ -7,7 +7,7 @@ import pytest
 def test_detect_plugin():
     plugin = detect_plugin('foo')
     assert plugin.__name__ == 'FooPlugin'
-    assert isinstance(plugin, AbstractPlugin)
+    assert issubclass(plugin, AbstractPlugin)
     
 
 def test_detect_unknown_plugin():
