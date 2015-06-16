@@ -10,3 +10,4 @@ class FooPlugin(AbstractPlugin):
     @staticmethod
     def write_to_file(stream, data):
         pass
+

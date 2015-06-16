@@ -40,7 +40,7 @@ def test_load_uri():
         'a=0&b=1\na=0&b=1'
     )
     data = plugin.read_from_file(stream)
-    assert data == [{"a": 0, "b": 1}, {"a": 0, "b": 1}]
+    assert data == [{"a": '0', "b": 1}, {"a": '0', "b": '1'}]
 
 
 def test_write_uri():
