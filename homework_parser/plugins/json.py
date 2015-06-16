@@ -1,12 +1,16 @@
+from __future__ import absolute_import
 from homework_parser.plugin import AbstractPlugin
 
+import json
 
-class FooPlugin(AbstractPlugin):
+
+class JsonPlugin(AbstractPlugin):
 
     @staticmethod
     def read_from_file(stream):
-        pass
+        return json.load(stream)
 
     @staticmethod
     def write_to_file(stream, data):
-        pass
+        json.dump(data, stream)
+

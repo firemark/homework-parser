@@ -31,6 +31,6 @@ def test_write_json():
     stream = StringIO()
     plugin.write_to_file(stream, data)
     assert stream.getvalue() == (
-        '[{"a":0,"b":1},{"a":0,"b":1}]'
+        '[{"a": 0, "b": 1}, {"a": 0, "b": 1}]'
     )
 
